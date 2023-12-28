@@ -5,79 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sinnovation Solutions Group</title>
     <style>
-        /* Add your CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
+        /* Basic Reset */
+        , :before, *:after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
         }
-        .header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding-bottom: 60px; /* Footer height */
         }
-        .nav {
-            background: #444;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-        .nav a {
-            color: white;
+        /* Header */
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
             text-decoration: none;
-            padding: 0 15px;
+            text-transform: uppercase;
+            font-size: 16px;
         }
-        .nav a:hover {
-            text-decoration: underline;
+        header ul {
+            padding: 0;
+            list-style: none;
         }
-        .content {
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        /* Showcase */
+        #showcase {
+            min-height: 400px;
+            background: url('placeholder-image-showcase.jpg') no-repeat 0 -100px;
+            text-align: center;
+            color: #ffffff;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        /* Boxes */
+        #boxes {
+            margin-top: 20px;
+        }
+        #boxes .box {
+            float: left;
+            text-align: center;
+            width: 30%;
+            padding: 10px;
+        }
+        #boxes .box img {
+            width: 90px;
+        }
+        /* Footer */
+        footer {
+            background: #35424a;
+            color: #ffffff;
+            text-align: center;
             padding: 20px;
-            text-align: center;
-        }
-        .footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: absolute;
+            position: fixed;
+            left: 0;
             bottom: 0;
             width: 100%;
+        }
+        /* Media Queries */
+        @media(max-width: 768px){
+            header #branding,
+            header nav,
+            header nav li,
+            #newsletter h1,
+            #newsletter form,
+            #boxes .box {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+            header {
+                padding-bottom: 20px;
+            }
+            #showcase h1 {
+                margin-top: 40px;
+            }
+            #boxes .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Sinnovation Solutions Group</h1>
-        <p>Modern innovation hub</p>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Sinnovation</span> Solutions Group</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#showcase">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav class="nav">
-        <!-- Navigation links -->
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <section id="showcase">
+        <div class="container">
+            <h1>Welcome to Sinnovation Solutions Group</h1>
+            <p>Modern innovation hub for cutting-edge solutions.</p>
+        </div>
+    </section>
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <img src="placeholder-image-1.jpg">
+                <h3>Innovation</h3>
+                <p>We are at the forefront of innovation, constantly updating our strategies to deliver the best.</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image-2.jpg">
+                <h3>Strategy</h3>
+                <p>Our strategic approach to business is what sets us apart.</p>
+            </div>
+            <div class="box">
+                <img src="placeholder-image-3.jpg">
+                <h3>Support</h3>
+                <p>We provide unmatched support to ensure your business succeeds.</p>
+            </div>
+        </div>
+    </section>
     <section class="content" id="about">
-        <h2>About Us</h2>
-        <p>
-            <!-- Add your company's about us text here -->
-        </p>
+        <div class="container">
+            <h2>About Us</h2>
+            <p>
+                <!-- Add your company's about us text here -->
+            </p>
+        </div>
     </section>
     <section class="content" id="services">
-        <h2>Our Services</h2>
-        <p>
-            <!-- Add details about your services here -->
-        </p>
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>
+                <!-- Add details about your services here -->
+            </p>
+        </div>
     </section>
     <section class="content" id="contact">
-        <h2>Contact Us</h2>
-        <p>
-            <!-- Add your contact information here -->
-        </p>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>
+                <!-- Add your contact information here -->
+            </p>
+        </div>
     </section>
-    <footer class="footer">
-        <p>&copy; 2023 Sinnovation Solutions Group. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2023 Sinnovation Solutions Group. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
